@@ -330,10 +330,10 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
 .tile.t2 { grid-column: span 5; aspect-ratio: 4/5; grid-row: span 2; }
 .tile.t3 { grid-column: span 4; aspect-ratio: 1/1; }
 .tile.t4 { grid-column: span 3; aspect-ratio: 1/1; }
-.tile.t5 { grid-column: span 8; aspect-ratio: 16/9; }
-.tile.t6 { grid-column: span 4; aspect-ratio: 3/4; grid-row: span 2; }
-.tile.t7 { grid-column: span 4; aspect-ratio: 4/3; }
-.tile.t8 { grid-column: span 4; aspect-ratio: 4/3; }
+.tile.t5 { grid-column: span 5; aspect-ratio: 4/5; grid-row: span 2; }
+.tile.t6 { grid-column: span 7; aspect-ratio: 16/11; }
+.tile.t7 { grid-column: span 4; aspect-ratio: 1/1; }
+.tile.t8 { grid-column: span 3; aspect-ratio: 1/1; }
 @media (max-width: 800px) {
   .tile { grid-column: span 12 !important; aspect-ratio: 4/3 !important; grid-row: auto !important; }
 }
