@@ -332,8 +332,9 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
 .tile.t4 { grid-column: span 3; height: 220px; }
 .tile.t5 { grid-column: span 7; height: 260px; }
 .tile.t6 { grid-column: span 5; height: 260px; }
-.tile.t7 { grid-column: span 5; height: 220px; }
-.tile.t8 { grid-column: span 7; height: 220px; }
+.tile.t7 { grid-column: span 4; height: 240px; }
+.tile.t8 { grid-column: span 4; height: 240px; }
+.tile.t9 { grid-column: span 4; height: 240px; }
 @media (max-width: 800px) {
   .tile { grid-column: span 12 !important; height: 240px !important; grid-row: auto !important; }
 }
