@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Glamour Bronze — Bronzeamento Natural ao Sol em Jacobina-BA</title>
+<meta name="description" content="Bronzeamento natural ao sol em Jacobina-BA. Bronze natural, banho de lua, make bronze e peeling corporal. Ambiente ao ar livre, atendimento profissional." />
+<meta property="og:title" content="Glamour Bronze — Bronzeamento Natural em Jacobina-BA" />
+<meta property="og:description" content="Bronze uniforme, seguro e duradouro em Jacobina-BA. Agende com a Débora pelo WhatsApp — de segunda a domingo." />
+<meta property="og:image" content="img/espreguicadeiras-hero.jpeg" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Glamour Bronze — Bronzeamento Natural em Jacobina-BA" />
+<meta name="twitter:description" content="Bronze uniforme, seguro e duradouro em Jacobina-BA." />
+<meta name="twitter:image" content="img/espreguicadeiras-hero.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* Glamour Bronze — Landing Page */
+:root {
+  --azul: #29B6E6;
+  --azul-deep: #0E8AB8;
+  --dourado: #C98A32;
+  --dourado-soft: #E4B068;
+  --verde: #5F9F3D;
+  --branco: #FFFDF8;
+  --bege: #F7EFE3;
+  --bege-deep: #EDE0CB;
+  --grafite: #1A1A1A;
+  --grafite-soft: #4A4A4A;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--branco);
+  color: var(--grafite);
+  overflow-x: hidden;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: 'Cormorant Garamond', 'Playfair Display', serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.05; }
+h2 { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.82rem; font-weight: 700; color: var(--dourado); display: inline-block; }
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px clamp(20px, 5vw, 60px);
+  transition: all .35s ease;
+}
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, transparent 100%);
+  z-index: -1;
+  opacity: 1;
+  transition: opacity .35s;
+  pointer-events: none;
+}
+.nav.scrolled::before { opacity: 0; }
+.nav.scrolled {
+  background: rgba(255, 253, 248, 0.95);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(26,26,26,0.08);
+}
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--branco);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  transition: color .35s ease, text-shadow .35s ease;
+}
+.logo .sun { color: var(--dourado-soft); font-style: italic; }
+.nav.scrolled .logo { color: var(--grafite); text-shadow: none; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+  transition: color .25s, text-shadow .25s;
+}
+.nav.scrolled .nav-links a { color: var(--grafite-soft); text-shadow: none; }
+.nav-links a:hover { color: var(--dourado-soft); }
+.nav-cta {
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--verde);
+  color: white !important;
+  font-weight: 600;
+  display: inline-flex; align-items: center; gap: 8px;
+  box-shadow: 0 8px 22px rgba(95,159,61,0.35);
+  transition: transform .25s, box-shadow .25s;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(95,159,61,0.5); }
+@media (max-width: 800px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px clamp(20px, 5vw, 60px) 100px;
+  display: flex; align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: -2;
+  background-image: url('img/espreguicadeiras-hero.jpeg');
+  background-size: cover; background-position: center;
+  transform: scale(1.05);
+  animation: kenburns 20s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  0% { transform: scale(1.05) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-2%, -1%); }
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201,138,50,0.25), transparent 55%),
+    radial-gradient(ellipse at 80% 90%, rgba(41,182,230,0.30), transparent 55%),
+    linear-gradient(180deg, rgba(26,26,26,0.20) 0%, rgba(26,26,26,0.45) 100%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.hero-text { color: var(--branco); }
+.hero-text .eyebrow {
+  color: rgba(255,253,248,0.95);
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(228,176,104,0.45);
+  border-radius: 999px;
+  padding: 5px 16px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hero-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.6rem, 6.2vw, 5.4rem);
+  font-weight: 500;
+  margin: 14px 0 20px;
+  line-height: 0.98;
+  letter-spacing: -0.015em;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.25);
+}
+.hero-text h1 em {
+  font-style: italic;
+  color: var(--dourado-soft);
+  font-weight: 400;
+}
+.hero-text p {
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  max-width: 540px;
+  color: rgba(255,253,248,0.92);
+  margin-bottom: 32px;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.3);
+}
+
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer; border: none;
+  transition: transform .25s, box-shadow .25s, background .25s;
+  font-family: inherit;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  box-shadow: 0 12px 30px rgba(18,140,126,0.45);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(18,140,126,0.6); }
+.btn-glass {
+  background: rgba(255, 253, 248, 0.16);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  color: white;
+  border: 1px solid rgba(255,253,248,0.4);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.btn-glass:hover { background: rgba(255,253,248,0.25); transform: translateY(-2px); }
+.btn-gold {
+  background: linear-gradient(135deg, var(--dourado), var(--dourado-soft));
+  color: white;
+  box-shadow: 0 10px 26px rgba(201,138,50,0.4);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(201,138,50,0.55); }
+
+/* Glass card hero */
+.hero-card-wrap {
+  position: relative;
+  display: flex; justify-content: center; align-items: center;
+  min-height: 480px;
+}
+.glass-card {
+  position: relative;
+  background: rgba(255, 253, 248, 0.14);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255,253,248,0.4);
+  border-radius: 28px;
+  padding: 38px 36px;
+  text-align: center;
+  color: var(--branco);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 360px;
+  z-index: 2;
+}
+.glass-card .sun-icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFE7B8, var(--dourado));
+  box-shadow: 0 0 40px rgba(228, 176, 104, 0.7);
+  animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(228,176,104,0.7); }
+  50% { box-shadow: 0 0 60px rgba(228,176,104,1); }
+}
+.glass-card h3 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+  font-style: italic;
+  color: var(--branco);
+}
+.glass-card .tagline { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,253,248,0.85); margin-bottom: 22px; }
+.glass-card .services-list { display: flex; flex-direction: column; gap: 10px; }
+.glass-card .service-pill {
+  background: rgba(255,253,248,0.12);
+  border: 1px solid rgba(255,253,248,0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  color: rgba(255,253,248,0.95);
+}
+
+/* Floating cards */
+.floating {
+  position: absolute;
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 12px 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--grafite);
+  z-index: 3;
+  animation: float 6s ease-in-out infinite;
+}
+.floating .ico {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.floating .ico.sun { background: linear-gradient(135deg, #FFE7B8, var(--dourado)); }
+.floating .ico.heart { background: linear-gradient(135deg, #FFC2D6, #E37B9C); }
+.floating .ico.wapp { background: linear-gradient(135deg, #25D366, #128C7E); }
+
+.float-1 { top: 8%; left: -4%; animation-delay: 0s; }
+.float-2 { top: 50%; right: -2%; animation-delay: 1.5s; }
+.float-3 { bottom: 8%; left: 4%; animation-delay: 3s; }
+
+@media (max-width: 900px) {
+  .float-1 { top: 0; left: 5%; }
+  .float-2 { top: auto; bottom: 35%; right: 5%; }
+  .float-3 { bottom: -10px; left: 8%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-14px) rotate(1deg); }
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,253,248,0.7);
+  font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  z-index: 2;
+}
+.scroll-hint::after {
+  content: ''; width: 1px; height: 36px; background: rgba(255,253,248,0.5);
+  animation: scrollLine 2s ease-in-out infinite;
+  transform-origin: top;
+}
+@keyframes scrollLine { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+
+/* ============ SECTIONS ============ */
+section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
+.container { max-width: 1280px; margin: 0 auto; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 44px; }
+.section-head h2 { margin: 14px 0 16px; }
+.section-head p { color: var(--grafite-soft); font-size: 1.05rem; }
+
+/* ============ ESPACO GALERIA ============ */
+.espaco { background: var(--bege); position: relative; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.tile {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(26,26,26,0.08);
+  transition: transform .5s, box-shadow .5s;
+}
+.tile:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(26,26,26,0.16); }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+.tile:hover img { transform: scale(1.08); }
+.tile .label {
+  position: absolute; bottom: 18px; left: 18px;
+  background: rgba(255,253,248,0.92);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--grafite);
+}
+.tile.t1 { grid-column: span 7; aspect-ratio: 16/11; }
+.tile.t2 { grid-column: span 5; aspect-ratio: 4/5; grid-row: span 2; }
+.tile.t3 { grid-column: span 4; aspect-ratio: 1/1; }
+.tile.t4 { grid-column: span 3; aspect-ratio: 1/1; }
+@media (max-width: 800px) {
+  .tile { grid-column: span 12 !important; aspect-ratio: 4/3 !important; grid-row: auto !important; }
+}
+
+/* ============ EXPERIENCIA ============ */
+.experiencia { background: var(--branco); }
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) { .exp-grid { grid-template-columns: 1fr; } }
+
+.exp-image-stack { position: relative; aspect-ratio: 4/5; }
+.exp-image-stack .img-main {
+  position: absolute; inset: 0;
+  border-radius: 28px; overflow: hidden;
+  box-shadow: 0 30px 70px rgba(26,26,26,0.18);
+}
+.exp-image-stack .img-main img { width: 100%; height: 100%; object-fit: cover; }
+.exp-image-stack .img-acc {
+  position: absolute;
+  width: 45%; aspect-ratio: 3/4;
+  bottom: -30px; right: -30px;
+  border-radius: 22px; overflow: hidden;
+  box-shadow: 0 20px 50px rgba(26,26,26,0.2);
+  border: 6px solid var(--branco);
+}
+.exp-image-stack .img-acc img { width: 100%; height: 100%; object-fit: cover; }
+.exp-image-stack .badge-float {
+  position: absolute; top: -20px; left: -20px;
+  background: var(--dourado);
+  color: var(--branco);
+  border-radius: 50%;
+  width: 130px; height: 130px;
+  display: grid; place-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  text-align: center;
+  line-height: 1.1;
+  box-shadow: 0 14px 36px rgba(201,138,50,0.4);
+  animation: rotate 30s linear infinite;
+}
+@keyframes rotate { to { transform: rotate(360deg); } }
+.exp-image-stack .badge-float span { display: block; }
+
+.exp-text h2 em { font-style: italic; color: var(--dourado); }
+.exp-text p { color: var(--grafite-soft); font-size: 1.05rem; margin: 18px 0 32px; max-width: 520px; }
+.exp-features { display: flex; flex-direction: column; gap: 18px; }
+.exp-feat {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 18px;
+  border-radius: 18px;
+  background: var(--bege);
+  transition: transform .3s, background .3s;
+}
+.exp-feat:hover { transform: translateX(8px); background: var(--bege-deep); }
+.exp-feat .num {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--branco);
+  display: grid; place-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--dourado);
+  box-shadow: 0 6px 18px rgba(201,138,50,0.18);
+}
+.exp-feat h4 { font-size: 1.05rem; margin-bottom: 4px; font-weight: 600; }
+.exp-feat p { font-size: 0.92rem; margin: 0; }
+
+/* ============ SERVICOS ============ */
+.servicos { background: var(--bege); position: relative; overflow: hidden; }
+.servicos::before {
+  content: ''; position: absolute; top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(201,138,50,0.15), transparent 70%);
+  pointer-events: none;
+}
+.serv-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) { .serv-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+@media (max-width: 1024px) { .serv-card { padding: 20px 16px; border-radius: 18px; } .serv-card h3 { font-size: 1.15rem; } }
+@media (max-width: 420px) { .serv-grid { grid-template-columns: 1fr; } }
+.serv-card {
+  background: var(--branco);
+  border-radius: 24px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s, box-shadow .35s;
+  border: 1px solid rgba(201,138,50,0.1);
+}
+.serv-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(26,26,26,0.12); }
+.serv-card .serv-img {
+  width: 100%; aspect-ratio: 4/3;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+.serv-card .serv-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s; }
+.serv-card:hover .serv-img img { transform: scale(1.1); }
+.serv-card .badge {
+  position: absolute; top: 14px; left: 14px;
+  background: rgba(255,253,248,0.95);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dourado);
+}
+.serv-card h3 { font-size: 1.45rem; margin-bottom: 8px; }
+.serv-card p { color: var(--grafite-soft); font-size: 0.92rem; margin-bottom: 20px; }
+.serv-card .agendar {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 600; font-size: 0.85rem;
+  color: var(--verde);
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(95,159,61,0.1);
+  transition: gap .25s, background .25s;
+}
+.serv-card .agendar:hover { gap: 14px; background: rgba(95,159,61,0.18); }
+
+/* ============ SEGURANCA ============ */
+.seguranca { background: var(--branco); }
+.seg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.seg-card {
+  text-align: center;
+  padding: 32px 22px;
+  border-radius: 22px;
+  background: var(--bege);
+  transition: transform .3s;
+}
+.seg-card:hover { transform: translateY(-6px); }
+.seg-icon {
+  width: 60px; height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--branco);
+  display: grid; place-items: center;
+  color: var(--dourado);
+  box-shadow: 0 8px 22px rgba(201,138,50,0.18);
+}
+.seg-icon svg { width: 28px; height: 28px; }
+.seg-card h4 { font-size: 1rem; margin-bottom: 6px; font-weight: 600; }
+.seg-card p { font-size: 0.85rem; color: var(--grafite-soft); }
+
+/* ============ RESTRICOES ============ */
+.restricoes { background: linear-gradient(180deg, var(--branco) 0%, var(--bege) 100%); }
+.restr-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--branco);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(26,26,26,0.06);
+  border: 1px solid rgba(201,138,50,0.15);
+}
+.restr-list { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+.restr-item {
+  display: flex; gap: 18px; padding: 16px 20px;
+  background: var(--bege);
+  border-radius: 14px;
+  align-items: flex-start;
+}
+.restr-item .dot {
+  flex-shrink: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--dourado);
+  margin-top: 8px;
+}
+.restr-item h4 { font-size: 1rem; margin-bottom: 4px; font-weight: 600; }
+.restr-item p { font-size: 0.92rem; color: var(--grafite-soft); margin: 0; }
+
+/* ============ DEPOIMENTOS ============ */
+.depoimentos { background: var(--bege); }
+.dep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.dep-card {
+  background: var(--branco);
+  border-radius: 22px;
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 14px 36px rgba(26,26,26,0.06);
+}
+.dep-card::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  color: var(--dourado);
+  line-height: 1;
+}
+.dep-card .stars { color: var(--dourado); margin-bottom: 14px; font-size: 0.9rem; letter-spacing: 0.1em; }
+.dep-card .quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; line-height: 1.4; margin-bottom: 22px; color: var(--grafite); }
+.dep-card .author { display: flex; align-items: center; gap: 12px; }
+.dep-card .avatar {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--dourado-soft), var(--dourado));
+  display: grid; place-items: center;
+  color: var(--branco);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.dep-card .author-info { font-size: 0.85rem; }
+.dep-card .author-info strong { display: block; font-weight: 600; }
+.dep-card .author-info span { color: var(--grafite-soft); font-size: 0.78rem; }
+
+/* ============ FORMULARIO ============ */
+.form-section {
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-deep) 100%);
+  position: relative;
+  overflow: hidden;
+  color: var(--branco);
+}
+.form-section::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(228,176,104,0.3), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,253,248,0.18), transparent 50%);
+  pointer-events: none;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 900px) { .form-grid { grid-template-columns: 1fr; } }
+.form-text .eyebrow {
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(201,138,50,0.95);
+  border-radius: 999px;
+}
+.form-text h2 {
+  color: #FFFFFF;
+  margin: 18px 0 18px;
+  font-weight: 600;
+  text-shadow: 0 3px 22px rgba(0,0,0,0.28);
+}
+.form-text h2 em {
+  font-style: italic;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFE7B8 60%, #E4B068 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.35);
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.35));
+  display: inline-block;
+}
+.form-text p { color: rgba(255,255,255,0.96); font-size: 1.05rem; max-width: 480px; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+@media (max-width: 600px) {
+  .form-text h2 { font-size: 2.4rem; line-height: 1.05; }
+  .form-text .eyebrow { font-size: 0.75rem; }
+}
+
+.form-card {
+  background: rgba(255,253,248,0.14);
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid rgba(255,253,248,0.35);
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+}
+.form-card .field { margin-bottom: 18px; }
+.form-card label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+  color: rgba(255,253,248,0.85);
+  font-weight: 600;
+}
+.form-card input {
+  width: 100%;
+  padding: 16px 18px;
+  background: rgba(255,253,248,0.92);
+  border: 1px solid rgba(255,253,248,0.5);
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--grafite);
+  transition: all .25s;
+}
+.form-card input:focus {
+  outline: none;
+  background: var(--branco);
+  border-color: var(--dourado-soft);
+  box-shadow: 0 0 0 4px rgba(228,176,104,0.25);
+}
+.form-card .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--grafite);
+  color: rgba(255,253,248,0.85);
+  padding: 80px clamp(20px, 5vw, 60px) 30px;
+}
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr; gap: 36px; } }
+.footer .logo { color: var(--branco); font-size: 1.8rem; margin-bottom: 14px; display: inline-block; }
+.footer p { font-size: 0.9rem; line-height: 1.7; }
+.footer h5 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--dourado-soft);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.footer a { display: block; color: rgba(255,253,248,0.7); font-size: 0.9rem; margin-bottom: 10px; transition: color .2s; }
+.footer a:hover { color: var(--dourado-soft); }
+.footer-social { display: flex; gap: 12px; margin-top: 18px; }
+.social-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  transition: transform .25s, box-shadow .25s;
+  color: white !important;
+  margin-bottom: 0 !important;
+}
+.social-btn:hover { transform: translateY(-3px); }
+.social-btn.ig {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+  box-shadow: 0 8px 22px rgba(221,42,123,0.4);
+}
+.social-btn.ig:hover { box-shadow: 0 14px 30px rgba(221,42,123,0.55); }
+.social-btn.wa { background: #25D366; box-shadow: 0 8px 22px rgba(37,211,102,0.4); }
+.social-btn.wa:hover { box-shadow: 0 14px 30px rgba(37,211,102,0.55); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,253,248,0.1);
+  padding-top: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+  font-size: 0.78rem;
+  color: rgba(255,253,248,0.5);
+}
+
+/* ============ FAB WHATSAPP ============ */
+.fab {
+  position: fixed; bottom: 24px; right: 24px;
+  z-index: 100;
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 22px 14px 16px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border-radius: 999px;
+  box-shadow: 0 14px 40px rgba(37,211,102,0.5);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  animation: fabPulse 2.5s ease-in-out infinite;
+  transition: transform .25s;
+}
+.fab:hover { transform: translateY(-3px) scale(1.03); }
+.fab .fab-ico {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+  display: grid; place-items: center;
+}
+.fab::before {
+  content: ''; position: absolute; inset: -4px;
+  border-radius: 999px;
+  border: 2px solid #25D366;
+  animation: fabRing 2s ease-out infinite;
+  pointer-events: none;
+}
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 14px 40px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 18px 50px rgba(37,211,102,0.8); }
+}
+@keyframes fabRing {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+@media (max-width: 600px) {
+  .fab .fab-text { display: none; }
+  .fab { padding: 14px; }
+}
+
+/* ============ REVEAL ON SCROLL ============ */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ============ SOBRE A DEBORA ============ */
+.debora { background: var(--branco); }
+.deb-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+@media (max-width: 960px) { .deb-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.deb-img-wrap { position: relative; }
+.deb-img-frame {
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(26,26,26,0.18);
+  aspect-ratio: 1 / 1.05;
+  position: relative;
+}
+.deb-img-frame::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, transparent 55%, rgba(41,182,230,0.12) 100%);
+}
+.deb-img-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top center;
+}
+.deb-badge {
+  position: absolute;
+  bottom: -18px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--dourado), var(--dourado-soft));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 10px 30px rgba(201,138,50,0.45);
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+
+.deb-text { padding-bottom: 20px; }
+.deb-text h2 { margin: 14px 0 20px; }
+.deb-text h2 em { font-style: italic; color: var(--dourado); }
+.deb-intro {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--grafite);
+  margin-bottom: 16px;
+}
+
+.deb-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 28px;
+}
+.deb-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,138,50,0.3);
+  background: rgba(201,138,50,0.07);
+  color: var(--dourado);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.deb-quote {
+  border-left: 3px solid var(--dourado-soft);
+  padding-left: 20px;
+  margin-top: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--grafite);
+  line-height: 1.6;
+}
+.deb-quote cite {
+  display: block;
+  font-size: 0.82rem;
+  font-style: normal;
+  color: var(--dourado);
+  font-weight: 600;
+  margin-top: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ============ HAMBURGER MENU ============ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  order: 3;
+  z-index: 60;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--branco);
+  border-radius: 2px;
+  transition: all .3s ease;
+  transform-origin: center;
+}
+.nav.scrolled .nav-hamburger span { background: var(--grafite); }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 800px) {
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,253,248,0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    z-index: 50;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a:not(.nav-cta) {
+    display: block !important;
+    font-size: 1.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--grafite) !important;
+    font-weight: 500;
+  }
+  .nav-links .nav-cta { font-size: 1rem; padding: 14px 36px; }
+  .nav-hamburger { z-index: 65; }
+}
+
+/* ============ FAQ ============ */
+.faq-section { background: var(--bege); }
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--branco);
+  border-radius: 18px;
+  border: 1px solid rgba(201,138,50,0.12);
+  overflow: hidden;
+  transition: box-shadow .3s;
+}
+.faq-item:hover { box-shadow: 0 8px 28px rgba(26,26,26,0.08); }
+.faq-item.open { border-color: rgba(201,138,50,0.35); }
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--grafite);
+  text-align: left;
+  transition: color .25s;
+}
+.faq-question:hover { color: var(--dourado); }
+.faq-item.open .faq-question { color: var(--dourado); }
+.faq-arrow {
+  flex-shrink: 0;
+  color: var(--dourado-soft);
+  transition: transform .35s ease;
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, padding .3s ease;
+  padding: 0 28px;
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 28px 22px;
+}
+.faq-answer p {
+  font-size: 0.97rem;
+  color: var(--grafite-soft);
+  line-height: 1.75;
+  border-top: 1px solid var(--bege-deep);
+  padding-top: 16px;
+}
+
+/* ============ FORM SUCCESS ============ */
+.form-success {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #2d7a4f;
+  background: rgba(45,122,79,0.1);
+  padding: 14px 18px;
+  border-radius: 14px;
+  margin-top: 8px;
+}
+
+/* ============ MOBILE FIXES ============ */
+@media (max-width: 600px) {
+  .hero { padding-top: 100px; min-height: auto; padding-bottom: 60px; }
+  .hero-card-wrap { min-height: 340px; }
+  .glass-card { max-width: 280px; padding: 28px 22px; }
+  .glass-card h3 { font-size: 1.5rem; }
+  .float-1, .float-2, .float-3 { font-size: 0.78rem; padding: 8px 12px; }
+  .exp-image-stack { aspect-ratio: 3/4; }
+  .exp-image-stack .img-acc { display: none; }
+  .restr-card { padding: 28px 20px; }
+  .faq-question { padding: 18px 20px; font-size: 0.92rem; }
+  .faq-answer { padding: 0 20px; }
+  .faq-item.open .faq-answer { padding: 0 20px 18px; }
+  .deb-img-wrap { padding-bottom: 30px; }
+}
+
+/* ============ LOGO PROPORCOES ============ */
+@media (max-width: 800px) { .logo { font-size: 1.6rem; } }
+
+/* Sun rays decoration */
+.sun-rays {
+  position: absolute;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(228,176,104,0.4) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+</style>
+<template id="__bundler_thumbnail" data-bg-color="#29B6E6">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#29B6E6"/>
+    <circle cx="900" cy="220" r="120" fill="#E4B068"/>
+    <circle cx="900" cy="220" r="160" fill="none" stroke="#FFE7B8" stroke-width="3" opacity="0.6"/>
+    <text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="92" font-style="italic" fill="#FFFDF8" font-weight="500">Glamour</text>
+    <text x="600" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="92" font-style="italic" fill="#E4B068" font-weight="500">Bronze</text>
+    <text x="600" y="600" text-anchor="middle" font-family="sans-serif" font-size="22" letter-spacing="8" fill="#FFFDF8" opacity="0.85">JACOBINA · BAHIA</text>
+  </svg>
+</template>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Glamour Bronze",
+  "telephone": "+55-74-99159-8379",
+  "email": "glamourbronzeofc@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estrada da Maçonaria, nº 08",
+    "addressLocality": "Jacobina",
+    "addressRegion": "BA",
+    "postalCode": "44706-685",
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "15:00"
+  },
+  "priceRange": "R$100-R$300",
+  "sameAs": ["https://www.instagram.com/bronzejacobina74"]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ COOKIE BANNER ============ -->
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(26,26,26,0.97);backdrop-filter:blur(12px);padding:16px clamp(20px,5vw,60px);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,253,248,0.1);">
+  <p style="color:rgba(255,253,248,0.85);font-size:0.85rem;margin:0;max-width:680px;">Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</p>
+  <button onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookieOk','1')" style="padding:10px 22px;border-radius:999px;background:var(--dourado);color:white;border:none;font-weight:600;font-size:0.85rem;cursor:pointer;white-space:nowrap;">Aceitar e continuar</button>
+</div>
+<script>if(localStorage.getItem('cookieOk'))document.getElementById('cookieBanner').style.display='none';</script>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#top" class="logo">Glamour <span class="sun">Bronze</span></a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="#espaco" onclick="closeMenu()">Espaço</a>
+    <a href="#experiencia" onclick="closeMenu()">Experiência</a>
+    <a href="#servicos" onclick="closeMenu()">Serviços</a>
+    <a href="#agendar" onclick="closeMenu()">Agendar</a>
+    <a href="https://wa.me/5574991598379" target="_blank" rel="noopener" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">☀ Agenda aberta · Seg a Dom</span>
+      <h1>Mais cor, mais confiança, <em>mais você.</em></h1>
+      <p>Bronzeamento natural ao sol em Jacobina, com acompanhamento profissional e resultado bonito de verdade. Um momento só seu, ao ar livre.</p>
+      <div class="cta-row">
+        <a href="https://wa.me/5574991598379?text=Ol%C3%A1!%20Quero%20agendar%20meu%20bronze%20✨" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar no WhatsApp
+        </a>
+        <a href="#agendar" class="btn btn-glass">Falar com especialista</a>
+      </div>
+    </div>
+
+    <div class="hero-card-wrap">
+      <!-- Floating cards -->
+      <div class="floating float-1">
+        <div class="ico sun">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </div>
+        <div>Bronze natural<br/><small style="color:#888;font-weight:400">ao sol</small></div>
+      </div>
+      <div class="floating float-2">
+        <div class="ico heart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div>Atendimento<br/><small style="color:#888;font-weight:400">com cuidado</small></div>
+      </div>
+      <div class="floating float-3">
+        <div class="ico wapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+        </div>
+        <div>Agende no<br/><small style="color:#888;font-weight:400">WhatsApp</small></div>
+      </div>
+
+      <!-- Glass card -->
+      <div class="glass-card">
+        <div class="sun-icon"></div>
+        <h3>Glamour Bronze</h3>
+        <div class="tagline">Jacobina · Bahia</div>
+        <div class="services-list">
+          <div class="service-pill">☀ Bronze natural</div>
+          <div class="service-pill">✦ Banho de lua</div>
+          <div class="service-pill">✺ Make bronze</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">Role para conhecer</div>
+</section>
+
+<!-- ============ ESPACO ============ -->
+<section class="espaco" id="espaco">
+  <div class="section-head reveal">
+    <span class="eyebrow">Nosso ambiente</span>
+    <h2>Conheça <em style="font-style:italic;color:var(--dourado)">nosso espaço</em></h2>
+    <p>Um ambiente ao ar livre, organizado e preparado para o seu conforto. Macas reguláveis, piscina liberada para relaxar, água de coco gelada e aquela energia leve que só Jacobina tem.</p>
+  </div>
+
+  <div class="gallery reveal">
+    <div class="tile t1">
+      <img src="img/espreguicadeiras-hero.jpeg" alt="Espreguiçadeiras azuis Glamour Bronze" loading="lazy" />
+      <div class="label">Espreguiçadeiras ao sol</div>
+    </div>
+    <div class="tile t2">
+      <img src="img/coco-drink.jpeg" alt="Coco verde com guarda-chuva" loading="lazy" />
+      <div class="label">Vibe Bahia</div>
+    </div>
+    <div class="tile t3">
+      <img src="img/espreguicadeiras-mural.jpeg" alt="Mural de coqueiros" loading="lazy" />
+      <div class="label">Cantinho dos coqueiros</div>
+    </div>
+    <div class="tile t4">
+      <img src="img/bar-area.jpeg" alt="Área de descanso" loading="lazy" />
+      <div class="label">Área de descanso</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCIA ============ -->
+<section class="experiencia" id="experiencia">
+  <div class="exp-grid">
+    <div class="exp-image-stack reveal">
+      <div class="badge-float"><span>Bronze</span><span>natural</span><span>ao sol ✦</span></div>
+      <div class="img-main">
+        <img src="img/espreguicadeiras-vertical.jpeg" alt="Ambiente Glamour Bronze" loading="lazy" />
+      </div>
+      <div class="img-acc">
+        <img src="img/girassois.jpeg" alt="Girassóis no espaço" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="exp-text reveal">
+      <span class="eyebrow">A experiência</span>
+      <h2>Não é só bronze. <em>É autoestima ao sol.</em></h2>
+      <p>Cada atendimento é pensado para você se sentir bonita, confiante e valorizada. Aqui o sol é só o começo — o que importa é como você se sente quando sai daqui.</p>
+
+      <div class="exp-features">
+        <div class="exp-feat">
+          <div class="num">1</div>
+          <div><h4>Bronze natural</h4><p>Resultado bonito, gradual e seguro — feito pelo sol da Bahia.</p></div>
+        </div>
+        <div class="exp-feat">
+          <div class="num">2</div>
+          <div><h4>Atendimento com cuidado</h4><p>Anamnese, produtos certificados e olhar atento em cada sessão.</p></div>
+        </div>
+        <div class="exp-feat">
+          <div class="num">3</div>
+          <div><h4>Ambiente ao ar livre</h4><p>Espreguiçadeiras, coco gelado e a brisa de Jacobina — só pra você relaxar.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICOS ============ -->
+<section class="servicos" id="servicos">
+  <div class="section-head reveal">
+    <span class="eyebrow">Serviços</span>
+    <h2>Para o seu bronze <em style="font-style:italic;color:var(--dourado)">perfeito</em></h2>
+    <p>Escolha a experiência ideal para sua pele e sua agenda. Todos com acompanhamento profissional.</p>
+  </div>
+
+  <div class="serv-grid">
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <span class="badge">Mais procurado</span>
+        <img src="img/bronzeamento-natural.jpeg" alt="Bronzeamento natural ao sol" loading="lazy" />
+      </div>
+      <h3>Bronzeamento natural ao sol</h3>
+      <p>Resultado gradual, natural e seguro. Cor de verdade, feita pelo sol — com ativador profissional e acompanhamento em cada minuto.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Bronzeamento%20natural%20ao%20sol" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <span class="badge">Marquinha perfeita</span>
+        <img src="img/bronzeamento-fita.jpeg" alt="Bronzeamento de fita" loading="lazy" />
+      </div>
+      <h3>Bronzeamento de fita</h3>
+      <p>Marquinha definida e personalizada — usamos fitas para criar o design desejado, com posicionamento estratégico e bronze uniforme e natural.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Bronzeamento%20de%20fita" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <img src="img/make-bronze.jpeg" alt="Make bronze" loading="lazy" />
+      </div>
+      <h3>Make bronze</h3>
+      <p>Resultado rápido e uniforme. Perfeito para um evento, uma viagem ou aquele clique que você quer marcar — sem precisar do sol.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Make%20Bronze" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <img src="img/banho-lua-tradicional.jpeg" alt="Banho de lua tradicional" loading="lazy" />
+      </div>
+      <h3>Banho de lua tradicional</h3>
+      <p>Clareia os pelos do corpo, realça o bronzeado natural e deixa a pele com aspecto iluminado, macio e renovado. O queridinho das clientes.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Banho%20de%20Lua%20Tradicional" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <span class="badge">Experiência completa</span>
+        <img src="img/banho-lua-personalizado.jpeg" alt="Banho de lua personalizado" loading="lazy" />
+      </div>
+      <h3>Banho de lua personalizado</h3>
+      <p>Uma experiência temática e especial: avaliação de pele, esfoliação corporal, hidratação profunda e ambiente preparado nos mínimos detalhes para você.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Banho%20de%20Lua%20Personalizado" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <img src="img/decapagem-corporal.jpeg" alt="Decapagem corporal" loading="lazy" />
+      </div>
+      <h3>Decapagem corporal</h3>
+      <p>Remove células mortas e impurezas, uniformiza o tom e potencializa o resultado do bronzeamento — pele mais lisa, macia e pronta para bronzear.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20a%20Decapagem%20Corporal" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <img src="img/clareamento-areas.jpeg" alt="Clareamento de áreas" loading="lazy" />
+      </div>
+      <h3>Clareamento de áreas</h3>
+      <p>Cuidado especial para uniformizar regiões que escurecem com o tempo: virilha, axilas, joelhos e cotovelos. Mais autoestima para se sentir bem em qualquer momento.</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20agendar%20o%20Clareamento%20de%20%C3%81reas" target="_blank" rel="noopener" class="agendar">Agendar →</a>
+    </div>
+
+    <div class="serv-card reveal">
+      <div class="serv-img">
+        <img src="img/sala-atendimento.jpeg" alt="Biquínis de tecido à venda" loading="lazy" />
+      </div>
+      <h3>Biquínis de tecido</h3>
+      <p>Modelos confortáveis, tecido macio e de qualidade — ideais para o bronzeamento ao sol. Venha escolher o seu e já sair pronta para bronzear!</p>
+      <a href="https://wa.me/5574991598379?text=Quero%20ver%20os%20biqu%C3%ADnis%20de%20tecido" target="_blank" rel="noopener" class="agendar">Ver modelos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEGURANCA ============ -->
+<section class="seguranca">
+  <div class="section-head reveal">
+    <span class="eyebrow">Confiança</span>
+    <h2>Cuidado e segurança em <em style="font-style:italic;color:var(--dourado)">cada atendimento</em></h2>
+    <p>A gente leva sua pele e sua tranquilidade a sério. Por isso, tudo aqui é feito dentro do que pede a regra — com carinho de quem ama o que faz.</p>
+  </div>
+
+  <div class="seg-grid">
+    <div class="seg-card reveal">
+      <div class="seg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <h4>Aprovação Anvisa</h4>
+      <p>Produtos certificados e dentro das normas da Anvisa.</p>
+    </div>
+    <div class="seg-card reveal">
+      <div class="seg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      </div>
+      <h4>Alvará sanitário</h4>
+      <p>Espaço regularizado para a sua tranquilidade.</p>
+    </div>
+    <div class="seg-card reveal">
+      <div class="seg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <h4>Ficha de anamnese</h4>
+      <p>Avaliação completa antes de cada atendimento.</p>
+    </div>
+    <div class="seg-card reveal">
+      <div class="seg-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11l-3 3-2-2"/></svg>
+      </div>
+      <h4>Termo de imagem</h4>
+      <p>Sua privacidade respeitada e formalizada por escrito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="depoimentos">
+  <div class="section-head reveal">
+    <span class="eyebrow">Quem já foi</span>
+    <h2>Histórias <em style="font-style:italic;color:var(--dourado)">que aquecem</em></h2>
+  </div>
+
+  <div class="dep-grid">
+    <div class="dep-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="quote">Me senti muito mais confiante. Saí de lá com uma cor linda e uma autoestima nova.</p>
+      <div class="author">
+        <div class="avatar">L</div>
+        <div class="author-info"><strong>Luana M.</strong><span>Cliente · Jacobina</span></div>
+      </div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="quote">Ambiente organizado e atendimento seguro. Senti que estavam cuidando da minha pele de verdade.</p>
+      <div class="author">
+        <div class="avatar">R</div>
+        <div class="author-info"><strong>Raquel S.</strong><span>Cliente · Jacobina</span></div>
+      </div>
+    </div>
+    <div class="dep-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="quote">Resultado lindo e natural. Não tem aquela cor falsa — tem cor de verão de verdade.</p>
+      <div class="author">
+        <div class="avatar">C</div>
+        <div class="author-info"><strong>Camila A.</strong><span>Cliente · Jacobina</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE A DEBORA ============ -->
+<section class="debora" id="debora">
+  <div class="deb-grid">
+    <div class="deb-img-wrap reveal">
+      <div class="deb-img-frame">
+        <img src="img/debora.jpeg" alt="Débora Lucena — Glamour Bronze" loading="lazy" />
+      </div>
+      <div class="deb-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        Técnica em Enfermagem
+      </div>
+    </div>
+
+    <div class="deb-text reveal">
+      <span class="eyebrow">Quem é a Débora?</span>
+      <h2>A mulher por trás do <em>bronze perfeito</em></h2>
+      <p class="deb-intro">Sou a Débora Lucena — bronzeadora apaixonada, técnica em enfermagem e a alma da Glamour Bronze. Aqui em Jacobina, cada cliente que entra sai diferente: mais confiante, mais linda e com aquele sorriso que só o sol da Bahia sabe dar.</p>
+      <p style="color:var(--grafite-soft);font-size:0.98rem;line-height:1.75;margin-bottom:28px;">Minha formação como técnica em enfermagem não é detalhe — é o que garante que cada sessão seja feita com o máximo de cuidado, higiene e atenção à sua saúde. Antes de qualquer procedimento, converso com você, entendo sua pele e cuido de cada detalhe.</p>
+
+      <div class="deb-pills">
+        <div class="deb-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2"/></svg>
+          Bronzeadora profissional
+        </div>
+        <div class="deb-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          Formação em Saúde
+        </div>
+        <div class="deb-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Atendimento humanizado
+        </div>
+        <div class="deb-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="14" y2="14"/></svg>
+          Ficha de anamnese
+        </div>
+      </div>
+
+      <blockquote class="deb-quote">
+        "Mais do que um bronze bonito, quero que você saia daqui se sentindo a mulher mais linda e confiante do mundo."
+        <cite>— Débora Lucena</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULARIO ============ -->
+<section class="form-section" id="agendar">
+  <div class="form-grid">
+    <div class="form-text reveal">
+      <span class="eyebrow">Vamos marcar?</span>
+      <h2>Quero meu <em>bronze perfeito</em></h2>
+      <p>Deixe seus dados — em segundos vamos te chamar no WhatsApp para combinar o melhor horário e tirar todas as suas dúvidas.</p>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--dourado-soft)"><path d="M12 2L9.5 8.5 2 9l5.5 5L6 22l6-3 6 3-1.5-8L22 9l-7.5-.5z"/></svg>
+          Atendimento humano
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.9rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--dourado-soft)"><path d="M12 2L9.5 8.5 2 9l5.5 5L6 22l6-3 6 3-1.5-8L22 9l-7.5-.5z"/></svg>
+          Resposta rápida
+        </div>
+      </div>
+    </div>
+
+    <form class="form-card reveal" id="leadForm" novalidate>
+      <div class="field">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" required />
+      </div>
+      <div class="field">
+        <label for="whats">WhatsApp</label>
+        <input type="tel" id="whats" name="whatsapp" placeholder="(74) 9 9159-8379" required />
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+      </div>
+      <button type="submit" class="btn btn-gold" id="formBtn">
+        Quero meu bronze perfeito
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+      <p class="form-success" id="formSuccess" style="display:none">✅ Recebemos! Vamos te chamar no WhatsApp em instantes.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq-section">
+  <div class="section-head reveal">
+    <span class="eyebrow">Dúvidas frequentes</span>
+    <h2>Tudo o que você <em style="font-style:italic;color:var(--dourado)">quer saber</em></h2>
+    <p>As perguntas mais comuns antes de agendar o seu bronze.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Como devo me preparar para a sessão?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Esfolie a pele no dia anterior (nunca no dia da sessão), chegue sem creme ou maquiagem no corpo e bem hidratada. Isso garante um bronze mais uniforme e duradouro.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Quanto tempo dura o resultado do bronze?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Com cuidados básicos (hidratação diária e evitar esfoliantes por 3-4 dias), o bronze natural ao sol dura de 7 a 15 dias. O Make Bronze dura de 5 a 7 dias.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Preciso agendar com antecedência?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Sim! Atendemos exclusivamente com hora marcada para garantir atenção total a você. As vagas são limitadas — agende pelo WhatsApp com antecedência, especialmente para fins de semana.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        O Make Bronze é igual ao autobronzeador de farmácia?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Não! Usamos produtos profissionais certificados pela Anvisa, aplicados com técnica especializada. Resultado uniforme e natural — sem manchas, sem cheiro forte, sem cor alaranjada de prateleira.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Quais formas de pagamento vocês aceitam?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Aceitamos Pix e outras formas de pagamento — confirme as opções disponíveis ao agendar pelo WhatsApp.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Vocês atendem no final de semana?
+        <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer"><p>Sim! Atendemos de segunda a domingo, das 8h às 15h. Agende com antecedência para garantir seu horário.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESTRICOES ============ -->
+<section class="restricoes">
+  <div class="restr-card reveal">
+    <div style="text-align:center">
+      <span class="eyebrow">Importante saber</span>
+      <h2 style="margin-top:14px">Quem não pode realizar o bronzeamento natural ao sol</h2>
+      <p style="color:var(--grafite-soft);max-width:560px;margin:14px auto 0">A Débora prioriza sua segurança acima de tudo. Por isso, algumas condições impedem a realização do procedimento:</p>
+    </div>
+    <div class="restr-list">
+      <div class="restr-item"><div class="dot"></div><div><h4>Lúpus e doenças autoimunes</h4><p>A exposição solar pode agravar condições autoimunes — sua saúde vem primeiro.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Dermatites, alergias cutâneas e urticária solar</h4><p>Peles com reações alérgicas ativas não devem ser expostas ao procedimento.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Vitiligo em fase ativa</h4><p>Não realizamos bronzeamento em peles com vitiligo ativo, por questão de segurança.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Histórico de câncer de pele</h4><p>Clientes com histórico de câncer de pele não devem realizar o procedimento.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Queimaduras solares recentes</h4><p>A pele precisa estar totalmente recuperada antes de qualquer sessão de bronze.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Uso de ácidos ou peelings recentes</h4><p>Tratamentos com ácidos deixam a pele sensibilizada — aguarde o período indicado pelo seu dermatologista.</p></div></div>
+      <div class="restr-item"><div class="dot"></div><div><h4>Medicamentos fotossensibilizantes</h4><p>Antibióticos, ácidos e Roacutan aumentam a sensibilidade solar e contraindicam o procedimento.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <a href="#top" class="logo">Glamour <span style="color:var(--dourado-soft);font-style:italic">Bronze</span></a>
+      <p>Bronzeamento natural ao sol em Jacobina-BA. Mais cor, mais confiança, mais você.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/bronzejacobina74" target="_blank" rel="noopener" class="social-btn ig" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/5574991598379" target="_blank" rel="noopener" class="social-btn wa" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h5>Endereço</h5>
+      <p>Estrada da Maçonaria, nº 08<br/>Bairro Catuaba<br/>Jacobina · Bahia<br/>CEP 44706-685</p>
+    </div>
+
+    <div>
+      <h5>Contato</h5>
+      <a href="https://wa.me/5574991598379" target="_blank" rel="noopener">📱 +55 74 9 9159-8379</a>
+      <a href="https://www.instagram.com/bronzejacobina74" target="_blank" rel="noopener">✦ @bronzejacobina74</a>
+      <p style="margin-top:16px;font-size:0.78rem;color:rgba(255,253,248,0.5)">CNPJ 62.787.804/0001-30</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Glamour Bronze. Todos os direitos reservados.</span>
+    <span>Feito com ☀ na Bahia</span>
+  </div>
+</footer>
+
+<!-- ============ FAB WHATSAPP ============ -->
+<a href="https://wa.me/5574991598379?text=Ol%C3%A1!%20Quero%20agendar%20meu%20bronze%20✨" target="_blank" rel="noopener" class="fab" aria-label="Agendar no WhatsApp">
+  <div class="fab-ico">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.007-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="fab-text">Agendar</span>
+</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target)) closeMenu();
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Form -> Email (FormSubmit.co) + WhatsApp
+  document.getElementById('leadForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const whats = document.getElementById('whats').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const btn = document.getElementById('formBtn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    try {
+      await fetch('https://formsubmit.co/ajax/glamourbronzeofc@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: '🌞 Novo Lead — Glamour Bronze LP',
+          nome, whatsapp: whats, email
+        })
+      });
+    } catch(_) {}
+
+    document.getElementById('formSuccess').style.display = 'block';
+    btn.style.display = 'none';
+    const msg = `Olá, Glamour Bronze! ✨%0A%0AMeu nome é *${encodeURIComponent(nome)}*%0AWhatsApp: ${encodeURIComponent(whats)}%0AE-mail: ${encodeURIComponent(email)}%0A%0AQuero agendar meu bronze perfeito 🌞`;
+    setTimeout(() => window.open(`https://wa.me/5574991598379?text=${msg}`, '_blank'), 800);
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // Parallax leve no hero bg
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      heroBg.style.transform = `scale(1.08) translateY(${y * 0.25}px)`;
+    }
+  });
+</script>
+
+</body>
+</html>
