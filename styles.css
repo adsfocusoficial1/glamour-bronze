@@ -330,6 +330,10 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
 .tile.t2 { grid-column: span 5; aspect-ratio: 4/5; grid-row: span 2; }
 .tile.t3 { grid-column: span 4; aspect-ratio: 1/1; }
 .tile.t4 { grid-column: span 3; aspect-ratio: 1/1; }
+.tile.t5 { grid-column: span 8; aspect-ratio: 16/9; }
+.tile.t6 { grid-column: span 4; aspect-ratio: 3/4; grid-row: span 2; }
+.tile.t7 { grid-column: span 4; aspect-ratio: 4/3; }
+.tile.t8 { grid-column: span 4; aspect-ratio: 4/3; }
 @media (max-width: 800px) {
   .tile { grid-column: span 12 !important; aspect-ratio: 4/3 !important; grid-row: auto !important; }
 }
@@ -443,6 +447,8 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
 }
 .serv-card .serv-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s; }
 .serv-card:hover .serv-img img { transform: scale(1.1); }
+.serv-img--biq { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; aspect-ratio: 4/3; overflow: hidden; }
+.serv-img--biq img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
 .serv-card .badge {
   position: absolute; top: 14px; left: 14px;
   background: rgba(255,253,248,0.95);
@@ -822,6 +828,15 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
   margin-bottom: 16px;
 }
 
+.deb-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: var(--grafite-soft);
+  margin-bottom: 28px;
+}
+
 .deb-pills {
   display: flex; flex-wrap: wrap; gap: 10px;
   margin-bottom: 28px;
@@ -833,7 +848,8 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
   border: 1px solid rgba(201,138,50,0.3);
   background: rgba(201,138,50,0.07);
   color: var(--dourado);
-  font-size: 0.82rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
@@ -855,6 +871,30 @@ section { padding: clamp(50px, 6vw, 90px) clamp(20px, 5vw, 60px); }
   font-weight: 600;
   margin-top: 8px;
   font-family: 'Inter', sans-serif;
+}
+
+.deb-cursos {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--dourado-soft);
+  background: rgba(201,138,50,0.05);
+  border-radius: 0 12px 12px 0;
+}
+.deb-cursos h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dourado);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.deb-cursos p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--grafite-soft);
+  font-style: italic;
 }
 
 /* ============ HAMBURGER MENU ============ */
