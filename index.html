@@ -8,6 +8,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<!-- OG Tags -->
+<meta property="og:title" content="Glamour Bronze â Bronzeamento Natural ao Sol em Jacobina-BA" />
+<meta property="og:description" content="Bronzeamento natural ao sol em Jacobina-BA. Bronze natural, banho de lua, make bronze e peeling corporal. Ambiente ao ar livre, atendimento profissional." />
+<meta property="og:url" content="https://www.glamourbronze.com.br/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="img/espreguicadeiras-hero.jpeg" />
+<link rel="canonical" href="https://www.glamourbronze.com.br/" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,"script","dataLayer","GTM-WX8D27XV");</script>
+<!-- End Google Tag Manager -->
 <link rel="stylesheet" href="styles.css" />
 <template id="__bundler_thumbnail" data-bg-color="#29B6E6">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -21,6 +35,11 @@
 </template>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WX8D27XV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
@@ -606,6 +625,14 @@
     } catch(_) {}
 
     document.getElementById('formSuccess').style.display = 'block';
+    // Tracking: dispara evento de lead para GTM
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'lead_form_submit',
+      value: 50,
+      currency: 'BRL',
+      form_id: 'contato'
+    });
     btn.style.display = 'none';
     const msg = `Olá, Glamour Bronze! ✨%0A%0AMeu nome é *${encodeURIComponent(nome)}*%0AWhatsApp: ${encodeURIComponent(whats)}%0AE-mail: ${encodeURIComponent(email)}%0A%0AQuero agendar meu bronze perfeito 🌞`;
     setTimeout(() => window.open(`https://wa.me/5574991598379?text=${msg}`, '_blank'), 800);
